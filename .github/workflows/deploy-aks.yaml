@@ -1,4 +1,4 @@
-name: deploy to Azure AKSss
+name: deploy to Azure AKSssdddß
 
 on:
   push:
