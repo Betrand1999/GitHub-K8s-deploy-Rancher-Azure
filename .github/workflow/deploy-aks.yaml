@@ -1,19 +1,19 @@
-name: deploy to Azure AKSx 
-on: 
- push: 
-  branches:
-   - dev-branch
+name: deploy to Azure AKSx
+on:
+  push:
+    branches:
+      - dev-branch
 jobs:
- build:
-  runs-on: ubuntu-latest
-  steps:
-  - name: checkout githuh repow 
-    uses: actions/checkout@v2
-  - name: azure/login
-    uses: azure/login@v1 
-    with: 
-     creds: ${{secrets.AZURE_CREDENTIALS}}
-  - name: set up kubectl 
-    uses: azure/setup-kubectl@v1 
-  - name: apply aks manifest        
-    run: kubectl apply -f kubernetes/aks/    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout githuh repow
+        uses: actions/checkout@v2
+      - name: azure/login
+        uses: azure/login@v1 
+        with: 
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: set up kubectl 
+        uses: azure/setup-kubectl@v1 
+      - name: apply aks manifest        
+        run: kubectl apply -f kubernetes/aks/
