@@ -1,4 +1,4 @@
-name: deploy to Azure AKSx
+name: deploy to Azure AKSxsss
 on:
   push:
     branches:
