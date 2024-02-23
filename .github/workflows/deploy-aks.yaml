@@ -18,4 +18,9 @@ jobs:
       - name: set up kubectl 
         uses: azure/setup-kubectl@v1 
       - name: apply aks manifest        
-        run: kubectl apply -f kubernetes/aks/
+        run: | 
+         kubectl apply -f kubernetes/aks/namespace.yaml
+         kubectl apply -f kubernetes/aks/deployment.yaml
+         kubectl apply -f kubernetes/aks/service.yaml
+         
+
