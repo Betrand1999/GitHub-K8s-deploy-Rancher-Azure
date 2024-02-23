@@ -1,7 +1,7 @@
 name: build and push docker imagedss
 on:
 push:
- branche:
+ branches:
   - dev-branch 
 jobs:
  build:
