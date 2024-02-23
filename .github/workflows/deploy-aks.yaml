@@ -1,13 +1,15 @@
-name: deploy to Azure AKSxsss
+name: deploy to Azure AKS
+
 on:
   push:
     branches:
       - dev-branch
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout githuh repowdd
+      - name: checkout github repo
         uses: actions/checkout@v2
       - name: azure/login
         uses: azure/login@v1 
