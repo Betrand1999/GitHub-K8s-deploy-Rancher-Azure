@@ -15,7 +15,7 @@ jobs:
       - name: azure/login
         uses: azure/login@v1 
         with: 
-          creds: ${{ secrets.AZURE_CLIENT_ID }}:${{ secrets.AZURE_CLIENT_SECRET }}:${{ secrets.AZURE_TENANT_ID }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       - name: set up kubectl 
         uses: azure/setup-kubectl@v1 
