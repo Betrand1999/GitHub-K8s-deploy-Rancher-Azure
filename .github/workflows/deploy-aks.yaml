@@ -1,4 +1,4 @@
-name: "deploy to Azure AKSssdddß"
+name: deploy to Azure AKSssdddß
 
 on:
   push:
@@ -11,12 +11,15 @@ jobs:
     steps:
       - name: checkout github repo
         uses: actions/checkout@v2
+      
       - name: azure/login
         uses: azure/login@v1 
         with: 
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_ID }}:${{ secrets.AZURE_CLIENT_SECRET }}:${{ secrets.AZURE_TENANT_ID }}
+      
       - name: set up kubectl 
         uses: azure/setup-kubectl@v1 
+      
       - name: apply aks manifest        
         run: | 
           kubectl apply -f kubernetes/aks/namespace.yaml
