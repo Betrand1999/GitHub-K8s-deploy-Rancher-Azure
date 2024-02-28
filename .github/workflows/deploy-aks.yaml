@@ -1,4 +1,4 @@
-name: deploy to Azure AKS-cluster
+name: deploy to Azure AKS-cluster-new
 
 on:
   push:
