@@ -22,6 +22,6 @@ jobs:
       
       - name: apply aks manifest        
         run: | 
-          kubectl apply -f kubernetes/aks/namespace.yaml
-          kubectl apply -f kubernetes/aks/deployment.yaml
-          kubectl apply -f kubernetes/aks/service.yaml
+          kubectl apply -f kubernetes/namespace.yaml
+          kubectl apply -f kubernetes/deployment.yaml
+          kubectl apply -f kubernetes/service.yaml
